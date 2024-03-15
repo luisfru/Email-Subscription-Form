@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(235, 18%, 26%);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    display: flex; /* Inner container also uses flexbox */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 110vh;
+    background-color: hsl(0, 0%, 100%);
+}
+.text {
+    flex: 1; /* Takes up remaining space */
+    padding-right: 20px; /* Add some spacing between text and image */
+}
+.image {
+    height: 70vh;
+    width: 50vh; /* Set width to ensure image takes up half of the container */
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+}
+
+.image img {
+    max-width: 100%; /* Ensure image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.success-message {
+    display: none;
+    margin-top: 15px;
+}
+
+.innerContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.texticon {
+    display: flex;
+    align-items: center;
+    
+}
+
+.icon {
+    margin-right: 10px; /* Adjust margin as needed */
+    width: 20px;
+}
+
+
+h1{
+    font-size: 50px;
+    color: hsl(235, 18%, 26%);
+}
+h2{
+    font-size: 50px;
+    color: hsl(235, 18%, 26%);
+    text-align: center;
+}
+
+ul li{
+    height: 5vh;
+}
+
+#subscriptionForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+#subscriptionForm input,
+#subscriptionForm button {
+    width: 50vh; /* Make input and button take full width */
+    height: 50px;
+}
+
+
+#errorMessage {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#email {
+    border: 2px solid ;
+    transition: border-color 0.3s ease;
+}
+
+
+input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:hover, input:focus {
+    border-color: #3498db;
+}
+
+button {
+    background-color: hsl(235, 18%, 26%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #2078ae;
+}
+
+
+#confirmationEmail {
+    font-weight: bold;
+}
+/* Add hover and focus styles for interactive elements */
+button:hover, button:focus, input:hover, input:focus {
+   
+    outline: none;
+}
+
+/* .attribution{
+    color: hsl(0, 0%, 100%);
+} */
