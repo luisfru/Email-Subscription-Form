@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const subscriptionForm = document.getElementById('subscriptionForm');
     const emailInput = document.getElementById('email');
+    const submitButton = document.getElementById('submit');
+
+    if (emailInput.value === '') {
+        submitButton.setAttribute('disabled', '');
+        submitButton.classList.add("disabled");
+    }
 
     subscriptionForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -32,8 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
     emailInput.addEventListener('input', function() {
         if (emailInput.checkValidity()) {
             emailInput.style.border = '2px solid green'; // Change border color to green
+            submitButton.removeAttribute("disabled", '');
+            submitButton.classList.remove("disabled");
+
         } else {
             emailInput.style.border = '2px solid red'; // Change border color to red
+            submitButton.setAttribute('disabled', '');
+            submitButton.classList.add("disabled");
+            
         }
     });
 
@@ -55,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function dismissMessage() {
-        const card = document.getElementById('card');
-        card.innerHTML = '';
+        window.location.reload();
     }
 });

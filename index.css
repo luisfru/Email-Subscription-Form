@@ -38,6 +38,15 @@ body{
     justify-content: flex-end; /* Align image to the right */
 }
 
+.disabled {
+    background-color: grey;
+    cursor: not-allowed;  
+}
+
+.disabled:hover {
+    background-color: grey;
+}
+
 .image img {
     max-width: 100%; /* Ensure image doesn't exceed its container */
     height: auto; /* Maintain aspect ratio */
